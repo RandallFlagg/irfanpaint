@@ -95,26 +95,15 @@ void CleanUp()
 			SetWindowLongPtr(hMainWindow,GWLP_WNDPROC,(__int3264)(LONG_PTR)realMainIVWndProc); //...remove the subclassing from the mainIVW
 			realMainIVWndProc=NULL; //Memorandum
 		}
-		if(dsUpdater!=NULL)
-		{
-			delete dsUpdater; //Delete the DibSection Updater
-			dsUpdater=NULL; //Memorandum
-		}
-		if(UITC!=NULL)
-		{
-			delete UITC; //Delete the UITools container
-			UITC = NULL;
-		}
-		if(langFile!=NULL)
-		{
-			delete langFile;
-			langFile=NULL;
-		}
-		if(iniSect!=NULL)
-		{
-			delete iniSect;
-			iniSect=NULL;
-		}
+		//Delete the various global objects used throughout IrfanPaint
+		delete dsUpdater;
+		dsUpdater=NULL;
+		delete UITC;
+		UITC = NULL;
+		delete langFile;
+		langFile=NULL;
+		delete iniSect;
+		iniSect=NULL;
 		//Reset the refresh state of the precision cursors
 		normPC.ResetRefresh();
 		clsrPC.ResetRefresh();
