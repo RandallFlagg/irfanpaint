@@ -1,0 +1,711 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "ToolbarButtons.h"
+#define STRINGIFY(x) #x
+#define TOSTRING(x) STRINGIFY(x)
+#define COLLATE(a,b) a##b
+#define EVAL(x)	x
+#pragma comment("user",COLLATE(IPLFGen_skip_string: ,EVAL(IDS_ERR_INVALIDLANGFILEVERSION)))
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutra resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_DLLICON             ICON                    "IrfanPaint.ico"
+IDI_TB_CIRCLE           ICON                    "TBIcons\\Circle.ico"
+IDI_TB_ERASER           ICON                    "TBIcons\\Eraser.ico"
+IDI_TB_FLOODFILL        ICON                    "TBIcons\\Floodfill.ico"
+IDI_TB_PAINTBRUSH       ICON                    "TBIcons\\Paintbrush.ico"
+IDI_TB_PICKER           ICON                    "TBIcons\\Picker.ico"
+IDI_TB_RECTANGLE        ICON                    "TBIcons\\Rectangle.ico"
+IDI_TB_ARROWLINE        ICON                    "TBIcons\\ArrowLine.ico"
+IDI_TB_ABOUT            ICON                    "TBIcons\\About.ico"
+IDI_TB_CLONE            ICON                    "TBIcons\\Clone.ico"
+IDI_TB_HELP             ICON                    "TBIcons\\Help.ico"
+IDI_TB_ARROW            ICON                    "TBIcons\\Arrow.ico"
+IDI_TB_PBSETTINGS       ICON                    "TBIcons\\PBSettings.ico"
+IDI_TB_ROTATE           ICON                    "TBIcons\\rotate.ico"
+IDI_TB_LINE             ICON                    "TBIcons\\Line.ico"
+IDI_IT_ALLEFT           ICON                    "ITIcons\\AlignLeft.ico"
+IDI_IT_ALCENTER         ICON                    "ITIcons\\AlignCenter.ico"
+IDI_IT_ALRIGHT          ICON                    "ITIcons\\AlignRight.ico"
+IDI_IT_BOLD             ICON                    "ITIcons\\Bold.ico"
+IDI_IT_ITALIC           ICON                    "ITIcons\\Italic.ico"
+IDI_IT_STRIKETHROUGH    ICON                    "ITIcons\\Strikethrough.ico"
+IDI_IT_UNDERLINE        ICON                    "ITIcons\\Underline.ico"
+IDI_IT_SELCOLOR         ICON                    "ITIcons\\SelColor.ico"
+IDI_TB_INSERTTEXT       ICON                    "TBIcons\\InsertText.ico"
+IDI_TB_COLORREPL        ICON                    "TBIcons\\ColorReplacer.ico"
+IDI_TB_MEASURE          ICON                    "TBIcons\\Measure.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 0, 0, 207, 180
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "About IrfanPaint"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,159,89,14
+    ICON            IDI_DLLICON,IDC_AB_ICON,7,7,40,40,SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE
+    CTEXT           "Text",IDC_AB_TEXT,44,7,156,44,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_AB_THANKS,7,53,193,102,ES_CENTER | ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN | 
+                    WS_VSCROLL
+    PUSHBUTTON      "&Visit IrfanPaint site",IDC_AB_SITE,108,159,92,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_PAINTBRUSH          CURSOR                  "Cursors\\Paintbrush.cur"
+IDC_PICKER              CURSOR                  "Cursors\\Picker.cur"
+IDC_FLOODFILL           CURSOR                  "Cursors\\Floodfill.cur"
+IDC_ERASER              CURSOR                  "Cursors\\RUBBER.CUR"
+IDC_INSERTTEXT          CURSOR                  "cursors\\inserttext.cur"
+#endif    // Neutra resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Inglese (Stati Uniti) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TOOLBOX DIALOGEX 0, 0, 35, 87
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_WINDOWEDGE | WS_EX_CONTEXTHELP | 
+    WS_EX_STATICEDGE
+CAPTION "Paint"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "IrfanPaint toolbar",IDC_TB_TOOLBAR,"ToolbarWindow32",
+                    0xb04,0,0,35,6
+    LTEXT           "Width (px)",IDC_TB_LB_WIDTH,1,4,34,8,0,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_TB_TX_WIDTH,0,14,33,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER,WS_EX_RIGHT
+    CONTROL         "",IDC_TB_UD_WIDTH,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,25,14,11,11
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,3,36,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,60,36,1
+    CONTROL         "Fill",IDC_TB_CH_FILL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,0,51,35,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TB_COLORPAL,"Static",SS_OWNERDRAW | SS_NOTIFY,2,
+                    64,31,23,WS_EX_TRANSPARENT
+    LTEXT           "Tolerance:",IDC_TB_LB_TOLERANCE,1,27,34,8,0,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_TB_TX_TOLERANCE,0,37,33,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER,WS_EX_RIGHT
+    CONTROL         "",IDC_TB_UD_TOLERANCE,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,24,37,11,11
+END
+
+IDD_ARROWSETTINGS DIALOGEX 0, 0, 190, 103
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Arrow settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,7,53,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,22,53,14
+    CONTROL         "&First arrow",IDC_AS_CH_FIRST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,17,52,8,WS_EX_TRANSPARENT
+    LTEXT           "Draw:",IDC_AS_L_DRAW,7,7,43,10,0,WS_EX_TRANSPARENT
+    CONTROL         "&Second arrow",IDC_AS_CH_SECOND,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,59,
+                    17,65,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_AS_PREVIEW,"Static",SS_OWNERDRAW | SS_SUNKEN,7,28,
+                    117,68
+    LTEXT           "Arrow width:",IDC_AS_L_AWIDTH,130,40,53,8,0,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_AS_TX_WIDTH,130,49,53,12,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_RIGHT
+    CONTROL         "",IDC_AS_UD_WIDTH,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,173,49,10,12
+    LTEXT           "Arrow length:",IDC_AS_L_ALENGTH,130,62,53,8
+    EDITTEXT        IDC_AS_TX_LENGTH,130,71,53,12,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_RIGHT
+    CONTROL         "",IDC_AS_UD_LENGTH,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,173,71,11,12
+    CONTROL         "Open head",IDC_AS_CH_OPENHEAD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,130,84,53,12,WS_EX_TRANSPARENT
+END
+
+IDD_SELPALCOLOR DIALOGEX 0, 0, 220, 221
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CLIPCHILDREN | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Color selection"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,114,204,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,168,204,50,14
+    EDITTEXT        IDC_SP_CINFO,7,198,103,16,ES_CENTER | ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+IDD_PENBRUSHSETTINGS DIALOGEX 0, 0, 244, 239
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Pen and brush settings"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Pen",IDC_PB_BOX_PEN,4,13,104,114
+    GROUPBOX        "Brush",IDC_PB_BOX_BRUSH,114,13,120,114
+    DEFPUSHBUTTON   "OK",IDOK,6,222,48,14
+    PUSHBUTTON      "Cancel",IDCANCEL,60,222,48,14
+    CONTROL         "",IDC_PB_PREVIEW,"Static",SS_OWNERDRAW | SS_NOTIFY,6,
+                    165,228,54,WS_EX_CLIENTEDGE
+    LTEXT           "Style:",IDC_PB_P_L_STYLE,10,25,45,8,0,WS_EX_TRANSPARENT
+    CONTROL         "_______",IDC_PB_P_SOLID,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,10,37,42,8,WS_EX_TRANSPARENT
+    CONTROL         "_ _ _ _ _",IDC_PB_P_DASH,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,10,49,42,8,WS_EX_TRANSPARENT
+    CONTROL         ". . . . . .",IDC_PB_P_DOT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,10,61,42,8,WS_EX_TRANSPARENT
+    CONTROL         "_ . _ . _ .",IDC_PB_P_DASHDOT,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,10,73,42,8,
+                    WS_EX_TRANSPARENT
+    CONTROL         "_ . . _ . .",IDC_PB_P_DASHDOTDOT,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,10,85,42,8,
+                    WS_EX_TRANSPARENT
+    CONTROL         "",IDC_PB_P_CUSTOM,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,10,97,10,8,WS_EX_TRANSPARENT
+    LTEXT           "Endcap:",IDC_PB_P_L_ENDCAP,62,25,43,9,0,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Round",IDC_PB_P_END_ROUND,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,62,37,43,8,WS_EX_TRANSPARENT
+    CONTROL         "Square",IDC_PB_P_END_SQUARE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,62,49,43,8,WS_EX_TRANSPARENT
+    CONTROL         "Flat",IDC_PB_P_END_FLAT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,62,61,43,8,WS_EX_TRANSPARENT
+    LTEXT           "Line joints:",IDC_PB_P_L_LINEJ,62,73,43,9,0,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Round",IDC_PB_P_LJ_ROUND,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,62,85,43,8,WS_EX_TRANSPARENT
+    CONTROL         "Beveled",IDC_PB_P_LJ_BEVEL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,62,97,43,8,WS_EX_TRANSPARENT
+    CONTROL         "Mitered",IDC_PB_P_LJ_MITER,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,62,109,43,8,WS_EX_TRANSPARENT
+    CONTROL         "Solid",IDC_PB_B_SOLID,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,168,26,63,8,WS_EX_TRANSPARENT
+    CONTROL         "- (horizontal)",IDC_PB_B_HHO,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,168,37,63,8,
+                    WS_EX_TRANSPARENT
+    CONTROL         "|| (vertical)",IDC_PB_B_HVE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,168,50,63,8,WS_EX_TRANSPARENT
+    CONTROL         "\\\\ (downward)",IDC_PB_B_HFD,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,168,61,63,8,
+                    WS_EX_TRANSPARENT
+    CONTROL         "//  (upward)",IDC_PB_B_HBD,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,168,74,63,8,WS_EX_TRANSPARENT
+    CONTROL         "+ (orthogonal)",IDC_PB_B_HCR,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,168,85,63,8,
+                    WS_EX_TRANSPARENT
+    CONTROL         "x (diagonal)",IDC_PB_B_HDI,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,168,98,63,8,WS_EX_TRANSPARENT
+    CTEXT           "Solid",IDC_PB_B_L_SOLID,120,26,48,8,0,WS_EX_TRANSPARENT
+    CTEXT           "45° left to right hatched",IDC_PB_B_L_45LTRH,120,61,48,
+                    18,0,WS_EX_TRANSPARENT
+    CTEXT           "Cross hatched",IDC_PB_B_L_CH,120,85,48,18,0,
+                    WS_EX_TRANSPARENT
+    CTEXT           "Line hatched",IDC_PB_B_L_LH,120,37,48,20,0,
+                    WS_EX_TRANSPARENT
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDVERT,57,18,1,108
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,61,71,43,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,115,34,117,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,115,58,117,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,115,82,117,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,115,106,117,1
+    CTEXT           "Color",IDC_PB_B_L_COLOR,120,109,48,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CONTROL         "",IDC_PB_B_COLOR,"Static",SS_OWNERDRAW | SS_NOTIFY,168,
+                    109,54,12,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_PB_P_TX_CUSTOM,22,96,29,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    GROUPBOX        "Pen width",IDC_PB_BOX_WIDTH,6,135,102,26
+    EDITTEXT        IDC_PB_TX_WIDTH,12,144,36,12,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_RIGHT
+    CONTROL         "",IDC_PB_UD_WIDTH,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,42,144,11,
+                    12
+    LTEXT           "pixel (1-9999)",IDC_PB_L_PIXEL,54,144,48,8,0,
+                    WS_EX_TRANSPARENT
+    GROUPBOX        "Hatch secondary color",IDC_PB_BOX_HSC,114,135,120,26
+    CONTROL         "Transparent",IDC_PB_H_TRANSPARENT,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,120,148,54,8,
+                    WS_EX_TRANSPARENT
+    CONTROL         "",IDC_PB_H_COLOR,"Button",BS_AUTORADIOBUTTON,180,148,12,
+                    8
+    CONTROL         "",IDC_PB_H_COLORP,"Static",SS_OWNERDRAW | SS_NOTIFY,192,
+                    144,36,12,WS_EX_CLIENTEDGE
+    CTEXT           "spc = 1px spc\r\ndot = 1 endcap",IDC_PB_P_IS_CUSTOM,7,
+                    109,50,16,0,WS_EX_TRANSPARENT
+    LTEXT           "Click on the preview pane above to exchange FG and BG styles.",
+                    IDC_PB_IS_PREVIEW,114,220,125,18,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_PB_TABS,"SysTabControl32",0x0,0,0,240,132,
+                    WS_EX_ACCEPTFILES
+END
+
+IDD_INSERTTEXT DIALOGEX 0, 0, 322, 178
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Insert text"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Font &name:",IDC_IT_L_FONTNAME,6,6,108,8,0,
+                    WS_EX_TRANSPARENT
+    COMBOBOX        IDC_IT_CO_FONTNAME,6,18,108,123,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "&Size:",IDC_IT_L_FONTSIZE,120,6,36,9,0,
+                    WS_EX_TRANSPARENT
+    COMBOBOX        IDC_IT_CO_FONTSIZE,120,18,36,114,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "&Bold",IDC_IT_CH_BOLD,"Button",BS_AUTOCHECKBOX | 
+                    BS_ICON | BS_PUSHLIKE | WS_TABSTOP,162,18,18,16
+    CONTROL         "&Italic",IDC_IT_CH_ITALIC,"Button",BS_AUTOCHECKBOX | 
+                    BS_ICON | BS_PUSHLIKE | WS_TABSTOP,180,18,17,16
+    CONTROL         "&Underline",IDC_IT_CH_UNDERLINE,"Button",
+                    BS_AUTOCHECKBOX | BS_ICON | BS_PUSHLIKE | WS_TABSTOP,198,
+                    18,18,16
+    CONTROL         "&Strikethrough",IDC_IT_CH_STRIKETHROUGH,"Button",
+                    BS_AUTOCHECKBOX | BS_ICON | BS_PUSHLIKE | WS_TABSTOP,216,
+                    18,17,16
+    CONTROL         "L&eft align",IDC_IT_RB_ALLEFT,"Button",
+                    BS_AUTORADIOBUTTON | BS_ICON | BS_PUSHLIKE | WS_GROUP,
+                    240,18,17,16
+    CONTROL         "&Center align",IDC_IT_RB_ALCENTER,"Button",
+                    BS_AUTORADIOBUTTON | BS_ICON | BS_PUSHLIKE,258,18,17,16
+    CONTROL         "&Right align",IDC_IT_RB_ALRIGHT,"Button",
+                    BS_AUTORADIOBUTTON | BS_ICON | BS_PUSHLIKE,276,18,17,16
+    CONTROL         "",IDC_IT_RE_TEXT,"RichEdit20W",WS_BORDER | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP | 0x11c4,6,36,312,90
+    DEFPUSHBUTTON   "OK",IDOK,6,162,48,15
+    PUSHBUTTON      "Cancel",IDCANCEL,66,162,48,15
+    PUSHBUTTON      "Hold to &preview",IDC_IT_BN_PREVIEW,204,162,114,15
+    PUSHBUTTON      "Select &color...",IDC_IT_BN_SELCOLOR,300,18,17,16,
+                    BS_ICON
+    GROUPBOX        "Render as",IDC_IT_GB_RENDERAS,6,126,312,30
+    CONTROL         "Empty path",IDC_IT_RB_RA_EMPTYPATH,"Button",
+                    BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP,12,134,72,
+                    18,WS_EX_TRANSPARENT
+    CONTROL         "Text",IDC_IT_RB_RA_TEXT,"Button",BS_AUTORADIOBUTTON | 
+                    BS_MULTILINE,164,134,72,18,WS_EX_TRANSPARENT
+    CONTROL         "Filled path",IDC_IT_RB_RA_FILLEDPATH,"Button",
+                    BS_AUTORADIOBUTTON | BS_MULTILINE,88,134,72,18,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Antialiased text",IDC_IT_RB_RA_AATEXT,"Button",
+                    BS_AUTORADIOBUTTON | BS_MULTILINE,240,134,72,18,
+                    WS_EX_TRANSPARENT
+END
+
+IDD_MEASUREMENTUNITS DIALOGEX 0, 0, 220, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Measurement units"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_MU_LV_UNITS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,7,7,151,152
+    DEFPUSHBUTTON   "&Close",IDC_MU_BN_CLOSE,163,7,50,14
+    PUSHBUTTON      "Move &up",IDC_MU_BN_MOVEUP,163,36,50,14,WS_DISABLED
+    PUSHBUTTON      "Move &down",IDC_MU_BN_MOVEDOWN,163,53,50,14,WS_DISABLED
+    PUSHBUTTON      "A&bsolutize",IDC_MU_BN_ABSOLUTIZE,163,82,50,14,
+                    WS_DISABLED
+    PUSHBUTTON      "&Add...",IDC_MU_BN_ADD,163,111,50,14
+    PUSHBUTTON      "&Edit...",IDC_MU_BN_EDIT,163,128,50,14,WS_DISABLED
+    PUSHBUTTON      "&Remove",IDC_MU_BN_REMOVE,163,145,50,14,WS_DISABLED
+END
+
+IDD_EDITMEASUREMENTUNIT DIALOGEX 0, 0, 265, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Edit measurement unit"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Name:",IDC_EMU_LB_NAME,7,7,45,9
+    EDITTEXT        IDC_EMU_TX_NAME,52,7,79,12,ES_AUTOHSCROLL
+    LTEXT           "Symbol:",IDC_EMU_LB_SYMBOL,134,7,32,9
+    EDITTEXT        IDC_EMU_TX_SYMBOL,168,7,34,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EMU_TX_DEFINITION_COEFFICIENT,83,22,48,12,
+                    ES_AUTOHSCROLL
+    LTEXT           "Definition:",IDC_EMU_LB_DEFINITION,7,22,45,9
+    LTEXT           "1 %unitsymbol% =",IDC_EMU_LB_DEFINITION2,52,22,30,9
+    COMBOBOX        IDC_EMU_CB_DEFINITION_SYMBOL,134,22,68,12,
+                    CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,208,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,208,24,50,14
+END
+
+IDD_MEASUREOUTPUT DIALOGEX 0, 0, 183, 125
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Measure results"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,126,7,50,14
+    PUSHBUTTON      "&New unit...",IDC_MO_BN_NEWUNIT,126,41,50,14,
+                    WS_DISABLED
+    PUSHBUTTON      "&Copy",IDC_MO_BN_COPY,126,24,50,14
+    LISTBOX         IDC_MO_LS_RESULTS,7,7,115,111,LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_TOOLBOX, DIALOG
+    BEGIN
+        VERTGUIDE, 2
+        BOTTOMMARGIN, 62
+    END
+
+    IDD_ARROWSETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 183
+        VERTGUIDE, 59
+        VERTGUIDE, 124
+        VERTGUIDE, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+        HORZGUIDE, 25
+        HORZGUIDE, 28
+    END
+
+    IDD_SELPALCOLOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 214
+    END
+
+    IDD_PENBRUSHSETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_MEASUREMENTUNITS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        VERTGUIDE, 158
+        VERTGUIDE, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+        HORZGUIDE, 21
+        HORZGUIDE, 36
+        HORZGUIDE, 67
+        HORZGUIDE, 82
+        HORZGUIDE, 96
+        HORZGUIDE, 111
+    END
+
+    IDD_EDITMEASUREMENTUNIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        VERTGUIDE, 52
+        VERTGUIDE, 131
+        VERTGUIDE, 134
+        VERTGUIDE, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+        HORZGUIDE, 7
+        HORZGUIDE, 19
+        HORZGUIDE, 22
+        HORZGUIDE, 34
+    END
+
+    IDD_MEASUREOUTPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 176
+        VERTGUIDE, 122
+        VERTGUIDE, 126
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""ToolbarButtons.h""\r\n"
+    "#define STRINGIFY(x) #x\r\n"
+    "#define TOSTRING(x) STRINGIFY(x)\r\n"
+    "#define COLLATE(a,b) a##b\r\n"
+    "#define EVAL(x)\tx\r\n"
+    "#pragma comment(""user"",COLLATE(IPLFGen_skip_string: ,EVAL(IDS_ERR_INVALIDLANGFILEVERSION)))\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,4,13,67
+ PRODUCTVERSION 0,4,13,67
+ FILEFLAGSMASK 0x1fL
+#ifdef _DEBUG
+ FILEFLAGS 0x9L
+#else
+ FILEFLAGS 0x8L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "IrfanView drawing plug-in"
+            VALUE "CompanyName", "Matteo Italia (irfanpaint@mitalia.net)"
+            VALUE "FileDescription", "IrfanView drawing plug-in"
+            VALUE "FileVersion", "0, 4, 13, 67"
+            VALUE "InternalName", "IrfanPaint"
+            VALUE "LegalCopyright", "Copyright © 2007-2008 by Matteo Italia"
+            VALUE "OriginalFilename", "IrfanPaint.dll"
+            VALUE "PrivateBuild", "Beta"
+            VALUE "ProductName", "IrfanView drawing plug-in"
+            VALUE "ProductVersion", "0, 4, 13, 67"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_TB_ARROW            "Arrow"
+    IDS_TB_PAINTBRUSH       "Paintbrush"
+    IDS_TB_ERASER           "Eraser"
+    IDS_TB_CLONE            "Clone"
+    IDS_TB_COLORREPL        "Color replacer"
+    IDS_TB_INSERTTEXT       "Text tool"
+    IDS_TB_LINE             "Line"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TB_ARROWLINE        "Arrow line"
+    IDS_TB_CIRCLE           "Ellipse"
+    IDS_TB_RECTANGLE        "Rectangle"
+    IDS_TB_FLOODFILL        "Floodfill"
+    IDS_TB_PICKER           "Picker"
+    IDS_TB_ROTATE           "Straighten/rotate image tool"
+    IDS_TB_MEASURE          "Measure tool"
+    IDS_TB_PBSETTINGS       "Pen and brush settings"
+    IDS_TB_HELP             "Exhaustive context help"
+    IDS_TB_ABOUT            "About..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TB_ARROW_EX         "The Selection Tool is for normal use of IrfanView, for example to create selections."
+    IDS_TB_PAINTBRUSH_EX    "The Paintbrush is used to paint freehand.\nClick and drag with the Left mouse button to paint with the foreground color.\nClick and drag with the Right mouse button to paint with the background color."
+    IDS_TB_ERASER_EX        "The Eraser is used to erase freehand.\nClick and drag with the Left Mouse button to erase with the background color.\nClick and drag with the Right Mouse button to erase restoring the original image."
+    IDS_TB_CLONE_EX         "The Clone Tool copies one part of an image to another area.\nIt can be used to remove dust and scratches from a photo.\nRight click to select the source, then Left click where you want to start replacing."
+    IDS_TB_COLORREPL_EX     "The Color replacer is used to replace a color with another one.\nClick and drag with the Left button to replace the background color with the foreground color.\nClick and drag with the Right button to replace the foreground color with the background color."
+    IDS_TB_INSERTTEXT_EX    "The Text Tool adds Formatted Text to the image.\nThe text cursor's cross-hair will be the baseline for inserted text.\nThe text will be left, right, or center aligned on the insertion point."
+    IDS_TB_LINE_EX          "The Line Tool draws straight lines.\nClick and drag to define the line. Release the mouse button to draw it.\nTo abort the line, click the Right mouse button.\nHold CTRL while dragging to center the line on the start point.\nHold SHIFT while dragging to constrain the line to multiples of 45°."
+    IDS_TB_ARROWLINE_EX     "The Arrow Line Tool draws arrows.\nClick and drag to define the arrow. Release the mouse button to draw it.\nTo abort the arrow, click the Right mouse button.\nHold CTRL while dragging to center the arrow on the start point.\nHold SHIFT while dragging to constrain the arrow to multiples of 45°.\nRight click on this button to open the ""Arrow settings"" dialog."
+    IDS_TB_CIRCLE_EX        "The Ellipse Tool is used to draw circles and ellipses. If the fill button above the color palette is checked, they will be solid; if not they will be hollow.\nClick and drag to define the ellipse. Release the mouse button to draw it.\nTo abort the ellipse, click the Right mouse button.\nHold CTRL while dragging to center the ellipse on the start point.\nHold SHIFT while dragging to draw a circle."
+    IDS_TB_RECTANGLE_EX     "The Rectangle Tool is used to draw squares and rectangles. If the fill button above the color palette is checked, they will be solid; if not they will be hollow.\nClick and drag to define the rectangle. Release the mouse button to draw it.\nTo abort the rectangle, click the Right mouse button.\nHold CTRL while dragging to center the rectangle on the start point.\nHold SHIFT while dragging to draw a square."
+    IDS_TB_FLOODFILL_EX     "The Floodfill Tool is used to fill areas with one color.\nClick with the Left mouse button to fill an area with the foreground color.\nClick with the Right mouse button to fill an area with the background color."
+    IDS_TB_PICKER_EX        "The Color-picker is used to select colors from the image.\nClick on a color with the Left mouse button to pick the foreground color.\nClick on a color with the Right mouse button to pick the background color.\nClick on this button holding the SHIFT button to disable the auto-return to the previous tool."
+    IDS_TB_ROTATE_EX        "The Straighten/rotate tool is used to straighten an image.\nClick and drag to ""underline"" a part of the image that must become horizontal or vertical.\nTo abort the line, click the Right mouse button.\nHold CTRL while dragging to center the line on the start point.\nHold SHIFT while dragging to constrain the line to multiples of 45°."
+    IDS_TB_MEASURE_EX       "With the Measure tool you can measure distances and angles on the image.\nClick and drag to select the distance to measure.\nAll the angle measures are relative to a horizontal line.\nTo abort the line, click the Right mouse button.\nHold CTRL while dragging to center the line on the start point.\nHold SHIFT while dragging to constrain the line to multiples of 45°.\nRight click on this button to open the ""Measurement units"" dialog, in which you can define new measurement units and edit, delete and sort the current ones."
+    IDS_TB_PBSETTINGS_EX    "Display the pen and brush settings dialog"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TB_HELP_EX          "Short context help"
+    IDS_TB_ABOUT_EX         "Display the version information of IrfanPaint"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERR_NOCLONESRC      "Before using the clone tool you must set the source point (right click on it).\nEnable the exhaustive context help and read the Clone tool tooltip to get more info."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERR_SAVESETTINGSFAIL 
+                            "Cannot save the settings; check if i_view32.ini is writable."
+    IDS_ERR_INVALIDLANGFILEVERSION 
+                            "The language file found is not for this IrfanPaint version, using it may result in untranslated/wrong text in the interface.\nWould you like to use it anyway?\nTip: you can find the latest language file on http://www.mitalia.net/irfanpaint."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_THANKS              "Special thanks to:\r\n\r\nIrfan Skiljan, who developed IrfanView, spent time to edit it to make IrfanPaint work, gave me a lot of useful suggestions and has always been very available.\r\n\r\nThe users of the IrfanView support forum, and in particular:\r\nBhikkhu Pesala, who wrote the exhaustive tooltips and the help page, reported bugs, helped me to track down them and gave many suggestions.\r\nMatera, who, from the other side of the world, let me make remote debugging via a VPN over a dial-up connection on his computer to track a bug; the attempt failed, but it has been quite epic.\r\nSteve, the forum admin.\r\n\r\nAll the betatesters, and expecially Leon Fisk, who reported me all the problems of IrfanPaint on Windows NT 4.\r\n\r\nDavide Pizzolato and his great CxImage library (http://www.codeproject.com/KB/graphics/cximage.aspx), from which I stole some pieces of code.\r\n\r\nLode Vandevenne and his efficient implementation of the scanline floodfill algorithm with stack (http://student.kuleuven.be/~m0216922/CG/floodfill.html), that I adapted for IrfanPaint.\r\n\r\nCodeProject.com and its great articles, that helped me many times.\r\n\r\nAll the translators.\r\n\r\nAll the users that made donations: thank you!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PB_TABS_FG          "Foreground"
+    IDS_PB_TABS_BG          "Background"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERR_NOTANUMBER      """%what%"" is not a valid number."
+    IDS_ERR_EMPTY           "The fields cannot be empty."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_AB_ABOUTTRANSLATION "%language% translation by %translator%"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MU_NAME             "Name"
+    IDS_MU_SYMBOL           "Symbol"
+    IDS_MU_DEFINITION       "Definition"
+    IDS_MU_DELETECONFIRM    "Are you sure you want to delete the currently selected measure unit?"
+    IDS_MU_DELETECONFIRM_CAPTION "Deletion confirm"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MUCLASS_DEFAULTUNIT "default unit"
+    IDS_MUCLASS_NOTDETERMINABLE "n.d."
+    IDS_MUCLASS_NODPI       "DPI not set"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MUCLASS_INCH        "inch"
+    IDS_MUCLASS_PIXEL       "pixel"
+    IDS_MUCLASS_DEGREE      "degree"
+    IDS_MUCLASS_MILLIMETER  "millimeter"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERR_CAPTION         "Error"
+END
+
+#endif    // Inglese (Stati Uniti) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

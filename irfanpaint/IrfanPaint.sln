@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IrfanPaint", "IrfanPaint.vcproj", "{795F66FF-EB49-4389-AF38-59714CF0AE1E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPLFGen", "IPLFGen\IPLFGen.csproj", "{2F1C59F7-7831-436C-9142-0660EF893375}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release_Size = Release_Size
+		Release_Speed = Release_Speed
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{795F66FF-EB49-4389-AF38-59714CF0AE1E}.Debug.ActiveCfg = Debug|Win32
+		{795F66FF-EB49-4389-AF38-59714CF0AE1E}.Debug.Build.0 = Debug|Win32
+		{795F66FF-EB49-4389-AF38-59714CF0AE1E}.Release_Size.ActiveCfg = Release_Size|Win32
+		{795F66FF-EB49-4389-AF38-59714CF0AE1E}.Release_Size.Build.0 = Release_Size|Win32
+		{795F66FF-EB49-4389-AF38-59714CF0AE1E}.Release_Speed.ActiveCfg = Release_Speed|Win32
+		{795F66FF-EB49-4389-AF38-59714CF0AE1E}.Release_Speed.Build.0 = Release_Speed|Win32
+		{2F1C59F7-7831-436C-9142-0660EF893375}.Debug.ActiveCfg = Debug|.NET
+		{2F1C59F7-7831-436C-9142-0660EF893375}.Release_Size.ActiveCfg = Release|.NET
+		{2F1C59F7-7831-436C-9142-0660EF893375}.Release_Size.Build.0 = Release|.NET
+		{2F1C59F7-7831-436C-9142-0660EF893375}.Release_Speed.ActiveCfg = Release|.NET
+		{2F1C59F7-7831-436C-9142-0660EF893375}.Release_Speed.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

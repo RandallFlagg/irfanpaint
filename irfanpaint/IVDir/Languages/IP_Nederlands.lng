@@ -1,0 +1,167 @@
+;Datum vertaling: 01-aug-2009
+[FileInfo]
+TranslatorName=Theo Landman
+LanguageName=Nederlands
+TargetVersion=0.4.13.*
+[General]
+1001=Selectiepijl
+1002=Penseel
+1003=Vlakgom/Wissen
+1004=Klonen
+1005=Kleur verwisselen
+1006=Tekst
+1007=Lijn
+1008=Pijllijn
+1009=Ellips
+1010=Rechthoek
+1011=Vlakvulling
+1012=Kleurpipet
+1013=Rechtzetten/Roteren
+1014=Meten
+1015=Pen- en Penseelinstellingen
+1016=Extra uitleg bij iconen
+1017=Over IrfanPaint...
+2001=De selectiepijl is bedoeld voor standaard gebruik in IrfanView.\n Bijv. om een selectie te maken of een bereik te markeren.
+2002=Het Penseel is bedoeld voor het tekenen uit de vrije hand.\nMet de linker muisknop teken je met de voorgrondkleur en\n met de rechter muisknop teken je met de achtergrondkleur.
+2003=De Vlakgom gebruik je om met de hand gedeeltes uit te wissen.\nMet de linker muisknop wis je met de achtergrondkleur en\n met de rechter muisknop wordt originele toestand hersteld.
+2004=Het Kloongereedschap kopieert een deel van het plaatje naar een andere plek.\nZo kun je bijv. makkelijk krassen 'wegwerken'.\nKlik met rechtermuisknop op de plek waar de gewenste kleur vandaan moet komen.\nKlik met links in het gedeelte waar je wilt wijzigen.\nGrootte van het kloongebied is in te stellen.\nEen kruis geeft aan waarvandaan wordt gekloond. 
+2005=Met Kleur verwisselen vervang je met linker muisknop de achtergrondkleur\ndoor de voorgrondkleur. Met de rechter muisknop vervang je voorgrondkleur door achtergrondkleur.
+2006=Het Tekstgereedschap voegt geformatteerde tekst toe in het plaatje.\nDe plek van het kruisje wordt de basislijn van de tekst.\nHet uitlijnen vindt plaats vanaf de plek van het kruisje!\nMet CTRL-Z kan één keer iets ongedaan worden gemaakt.
+2007=Met het Lijngereedschap teken je rechte lijnen.\nKlik en trek de de lijn in de gewenste richting.\nLaat muisknop los en de lijn ligt op zijn plaats.\nOm het tekenen af te breken druk je op de rechter muisknop.\nHoud CTRL ingedrukt om de lijn vanuit het startpunt naar weerzijden te tekenen.\n Houd SHIFT ingedrukt om de lijn exact onder hoeken van 45° te maken.
+2008=Met het Pijllijngereedschap teken je pijllijnen.\nKlik en trek de pijllijn in de gewenste richting.\nLaat muisknop los en de pijl ligt op zijn plaats.\nKlik met rechter muisknop op het icoon om een menu te krijgen voor de diverse instellingen.
+2009=Het Ellipsgereedschap tekent ellipsen en cirkels.\nAls in het PAINT-menu onderin 'Vullen' is aangevinkt wordt de figuur opgevuld met de voorgrondkleur.\nKlik en trek om de gewenste vorm en richting van de ellips te maken.\nLaat los als gewenste vorm is bereikt.\nOm het teken af te breken de rechter muisknop indrukken.\nHoud CTRL ingedrukt om de ellips vanuit het midden te tekenen.\nHoud SHIFT ingedrukt om een cirkel te maken.
+2010=Het Rechthoekgereedschap tekent vierkanten en rechthoeken.\nAls in het PAINT-menu onderin 'Opvullen' is aangevinkt wordt de figuur opgevuld met de voorgrondkleur.\nKlik en trek om de gewenste vorm en richting van de rechthoek te maken.\nLaat los als gewenste vorm is bereikt.\nOm het teken af te breken de rechter muisknop indrukken.\nHoud CTRL ingedrukt om de rechthoek vanuit het midden te tekenen.\nHoud SHIFT ingedrukt om een vierkant te maken.
+2011=Met het Vlakvulgereedschap vul je vlakgedeeltes met één bepaalde kleur.\nVia de linker muisknop vul je met de voorgrondkleur.\nMet de rechter muisknop vul je met de achtergrondkleur.\nIn het PAINT-menu onderin kun je de gewenste kleurtolerantie van de oorspronkelijke kleur instellen.
+2012=Met het Kleurpipet maak je de kleur van een gekozen pixel tot actuele voor- of achtergrondkleur.\nDe linker muisknop voor de voorgrondkleur, de rechter voor de achtergrond.\nTijdens het bewegen van het pipet zie je in het PAINT-menu\nlinks onderin de kleur van het pixel onder het pipet.\nHoud je SHIFT ingedrukt dan kies je één keer en ga je terug naar het eerder gebruikte gereedschap.
+2013=Het Rotatiegereedschap dient voor het rechtzetten of draaien van een afbeelding.\nKlik en trek een lijn waarlangs de afbeelding zich horizontaal of verticaal moet uitlijnen.\nOm het tekenen af te breken druk je op de rechter muisknop.\nHoud CTRL ingedrukt om de lijn vanuit het midden uit te tekenen.\nHoud SHIFT ingedrukt om de lijn in exact in hoeken van 45° te maken.
+2014=Met het Meetgereedschap kun je afstanden en hoeken in de afbeelding meten.\nKlik en sleep om de te meten afstand te selecteren.\nKlik met de rechtermuisknop voor het bijbehorende menu.
+2015=Pen- en Penseelinstellingen
+2016=Extra uitleg van de iconen
+2017=IrfanPaint versie-informatie
+5201=Voor het klonen met de rechter muisknop een beginpunt kiezen.\nBezoek ook de helppagina's op mijn website voor meer informatie.
+5102=Kan instellingen niet opslaan; ga na of het bestand i_view32.ini schrijfrechten heeft.
+6001=Speciale dank aan:\r\n\r\nIrfan Skiljan, de maker van IrfanView, die mij hielp om IrfanPaint mogelijk te maken en mij talloze suggesties deed en altijd klaar stond.\r\n\r\nDe mensen van het IrfanView Support-Forum en speciaal:\r\nBhikkhu Pesala, die de uitgebreide Tooltips en helppagina's maakte, fouten documenteerde en mij hielp ze te vinden  en mij met raad en daad bijstond.\r\nMatera, die mij vanaf de andere kant van de wereld via VPN toestond debugging op zijn computer uit te laten voeren; dit mislukte maar we hadden veel plezier.\r\nSteve, de Forum-Administrator.\r\n\r\nAlle Betatesters en speciaal Leon Fisk, die mij alle problemen van IrfanPaint onder Windows NT 4 zond.\r\n\r\nDavide Pizzolato en zijn geweldige CxImage-Library(http://www.codeproject.com/KB/graphics/cximage.aspx), waaruit ik wat code "gestolen" heb.\r\n\r\nLode Vandevenne en zijn efficiënte implementatie van het "Scanline-Floodfill"-Algorithme met buffer (http://student.kuleuven.be/~m0216922/CG/floodfill.html), die ik voor IrfanPaint heb aangepast.\r\n\r\nCodeProject.com en de geweldige artikelen, die mij zo vaak hebben geholpen.\r\n\r\nDank ook aan alle vertalers.\r\n\r\nAlle gebruikers die geld hebben gegeven:Hartelijk Dank!
+1443=Voorgrond
+1444=Achtergrond
+5301="%what%" is geen geldige waarde.
+5302 De velden mogen niet leeg zijn.
+1101=%language%-vertaald door %translator%
+1651=Naam
+1652=Symbool
+1653=Definitie
+1654=Weet je zeker dat de geselecteerde meeteenheid wilt wissen?
+1655=Bevestig wissen
+7001=standaard eenheid
+7002=n.d.
+7003=DPI niet ingesteld
+7011=inch
+7012=pixel
+7013=graden
+7014=millimeter
+5000=Fout
+[101]
+0=Over IrfanPaint
+1=OK
+1102=Tekst
+1104=&Bezoek IrfanPaint-Website
+[100]
+0=Paint
+1060=Werkbalk IrfanPaint
+1053=Grootte (Pixel)
+1059=Vullen
+1056=Tolerantie:
+[103]
+0=Pijlinstellingen
+1=OK
+2=Annuleren
+1301=&Eerste pijl
+1311=Teken:
+1302=&Tweede pijl
+1309=Pijlgrootte:
+1310=Pijllengte:
+1308=Open punt
+[102]
+0=Kleurselectie
+1=OK
+2=Annuleren
+[104]
+0=Pen- en penseelinstellingen
+1442=Pen
+1441=Penseel
+1=OK
+2=Annuleren
+1432=Lijntype:
+1404=_______
+1405=_ _ _ _ _
+1406=. . . . . .
+1407=_ . _ . _ .
+1408=_ . . _ . .
+1433=Lijneinde:
+1410=Rond
+1411=Hoekig
+1412=Vlak
+1434=Lijnafsluiting:
+1413=Rond
+1414=Schuin
+1415=Recht
+1416=Opgevuld
+1417=- (Horizontaal)
+1418=|| (Verticaal)
+1419=\\\\ (neerwaarts)
+1420=// (opwaarts)
+1421=+ (Loodrecht)
+1422=x (Diagonaal)
+1435=Opgevuld
+1437=45° Arcering\nlinks naar rechts
+1438=Kruisgewijze arcering
+1436=Rechte arcering
+1439=Kleur
+1445=Stiftdikte
+1448=Pixel (1-9999)
+1440=Tweede kleur voor arcering
+1426=Transparant
+1429=space=1 pix. spc.\r\n.=1 px. Lijn
+1431=Hierboven 'voorbeeld'. Klik om Voor- en Achtergrondinst. om te wisselen.
+[105]
+0=Voeg tekst in
+1501=&Naam Lettertype:
+1502=&Grootte:
+1506=&Vet
+1507=&Cursief
+1508=&Onderstrepen
+1509=&Doorgehaald
+1510=&Links uitgelijnd
+1511=&Gecentreerd
+1512=&Rechts uitgelijnd
+1=OK
+2=Annuleren
+1526=&Testen
+1513=Kies K&leur...
+1521=Weergeven als
+1522=Niet opgevuld
+1524=Normale Tekst
+1523=Tekst Opgevuld
+1525=Antialias Tekst
+[106]
+0=Maateenheden
+1602=&Afsluiten
+1603=&Omhoog
+1604=Om&laag
+1605=A&bsoluut
+1606=&Toevoegen...
+1607=&Bewerken...
+1608=&Verwijderen
+[107]
+0=Bewerk maateenheid
+1701=Naam:
+1703=Symbool:
+1705=Definitie:
+1706=1 %unitsymbol% =
+1=OK
+2=Annuleren
+[108]
+0=Meetresultaat
+1=OK
+1803=&Nieuwe eenheid...
+1802=&Kopieer
+

@@ -1,0 +1,197 @@
+;Language file template generated on Sat, 05 Sep 2009 15:15:54 GMT by IPLFGen by Matteo Italia - v. 0.1.4.7
+;=== FILE STRUCTURE ===
+;The language file contains a [FileInfo] section, a [General] section and some numbered sections (e.g. [101], [102], ...)
+;The [FileInfo] sections contains informations about the translator, the language name and the target IrfanPaint version.
+;In the TargetVersion value you can insert a * so that the comparison between the TargetVersion and the IrfanPaint version stop there.
+;For example, if you want to make the language file work with all the 0.4.11 builds, just insert 0.4.11.*; be careful, always insert the asterisk after a dot.
+;The [General] section contains the strings of the string table; they are usually strings that are displayed in error messages, tooltips, ...
+;Each numbered section contains the strings of a dialog; the strings numbers are the IDs of the controls in which they will be displayed.
+;The 0 string is the title of the dialog.
+;=== ACCELERATORS ===
+;The & symbol is put before the accelerator letter; for example if you find a &Bold it means that the button that contains that text can be pressed also pressing ALT+B.
+;You can change the accelerator letter (e.g. in Italian &Italic becomes &Corsivo), but be careful: the accelerators of the same dialog must not conflict.
+;=== ESCAPE SEQUENCES ===
+;The recognised escape sequences are:
+;   \n      newline          (ASCII 0x0A)
+;   \r      carriage return  (ASCII 0x0D)
+;   \\      backslash        (ASCII 0x5C)
+;Unrecognized escape sequences are treated as left as they are.
+;In most of controls to make a new line you need to insert a \r\n.
+;=== PLACEHOLDERS ===
+;Text enclosed between two "%" is a placeholder for something else that will be put there at runtime.
+;You can move the placeholder where you want in the string, so you'll be able to arrange the sentence as you like more.
+;These text placeholders are specific of each string; you cannot use the placeholders of a string in another.
+;The placeholders names are usually self-descriptive. Anyway, here's a list of the currently used placeholders:
+;   %translator%    Translator name as stated in the [FileInfo]\TranslatorName key.
+;   %language%      Language name as stated in the [FileInfo]\LanguageName key.
+;=== COMMENTS ===
+;If a row begins with a ; it is a comment; it is completely ignored by the parser.
+;You can put any comment you want, but all the comments will be stripped out when the file will be distributed to reduce file size unless you ask to keep them.
+;It is very appreciated if you strip out all the comments (including these that you are reading now) by yourself. Thank you!
+;=== MISC ===
+;If you do not translate a string it will remain untranslated in the interface, no error message (like "incomplete language file") will be issued.
+[FileInfo]
+TranslatorName=Put your name here
+LanguageName=Put the language name (in its language, not in English) here
+TargetVersion=0.4.13.*
+[General]
+1001=Arrow
+1002=Paintbrush
+1003=Eraser
+1004=Clone
+1005=Color replacer
+1006=Text tool
+1007=Line
+1008=Arrow line
+1009=Ellipse
+1010=Rectangle
+1011=Floodfill
+1012=Picker
+1013=Straighten/rotate image tool
+1014=Measure tool
+1015=Pen and brush settings
+1016=Exhaustive context help
+1017=About...
+2001=The Selection Tool is for normal use of IrfanView, for example to create selections.
+2002=The Paintbrush is used to paint freehand.\nClick and drag with the Left mouse button to paint with the foreground color.\nClick and drag with the Right mouse button to paint with the background color.
+2003=The Eraser is used to erase freehand.\nClick and drag with the Left Mouse button to erase with the background color.\nClick and drag with the Right Mouse button to erase restoring the original image.
+2004=The Clone Tool copies one part of an image to another area.\nIt can be used to remove dust and scratches from a photo.\nRight click to select the source, then Left click where you want to start replacing.
+2005=The Color replacer is used to replace a color with another one.\nClick and drag with the Left button to replace the background color with the foreground color.\nClick and drag with the Right button to replace the foreground color with the background color.
+2006=The Text Tool adds Formatted Text to the image.\nThe text cursor's cross-hair will be the baseline for inserted text.\nThe text will be left, right, or center aligned on the insertion point.
+2007=The Line Tool draws straight lines.\nClick and drag to define the line. Release the mouse button to draw it.\nTo abort the line, click the Right mouse button.\nHold CTRL while dragging to center the line on the start point.\nHold SHIFT while dragging to constrain the line to multiples of 45°.
+2008=The Arrow Line Tool draws arrows.\nClick and drag to define the arrow. Release the mouse button to draw it.\nTo abort the arrow, click the Right mouse button.\nHold CTRL while dragging to center the arrow on the start point.\nHold SHIFT while dragging to constrain the arrow to multiples of 45°.\nRight click on this button to open the "Arrow settings" dialog.
+2009=The Ellipse Tool is used to draw circles and ellipses. If the fill button above the color palette is checked, they will be solid; if not they will be hollow.\nClick and drag to define the ellipse. Release the mouse button to draw it.\nTo abort the ellipse, click the Right mouse button.\nHold CTRL while dragging to center the ellipse on the start point.\nHold SHIFT while dragging to draw a circle.
+2010=The Rectangle Tool is used to draw squares and rectangles. If the fill button above the color palette is checked, they will be solid; if not they will be hollow.\nClick and drag to define the rectangle. Release the mouse button to draw it.\nTo abort the rectangle, click the Right mouse button.\nHold CTRL while dragging to center the rectangle on the start point.\nHold SHIFT while dragging to draw a square.
+2011=The Floodfill Tool is used to fill areas with one color.\nClick with the Left mouse button to fill an area with the foreground color.\nClick with the Right mouse button to fill an area with the background color.
+2012=The Color-picker is used to select colors from the image.\nClick on a color with the Left mouse button to pick the foreground color.\nClick on a color with the Right mouse button to pick the background color.\nClick on this button holding the SHIFT button to disable the auto-return to the previous tool.
+2013=The Straighten/rotate tool is used to straighten an image.\nClick and drag to "underline" a part of the image that must become horizontal or vertical.\nTo abort the line, click the Right mouse button.\nHold CTRL while dragging to center the line on the start point.\nHold SHIFT while dragging to constrain the line to multiples of 45°.
+2014=With the Measure tool you can measure distances and angles on the image.\nClick and drag to select the distance to measure.\nAll the angle measures are relative to a horizontal line.\nTo abort the line, click the Right mouse button.\nHold CTRL while dragging to center the line on the start point.\nHold SHIFT while dragging to constrain the line to multiples of 45°.\nRight click on this button to open the "Measurement units" dialog, in which you can define new measurement units and edit, delete and sort the current ones.
+2015=Display the pen and brush settings dialog
+2016=Short context help
+2017=Display the version information of IrfanPaint
+5201=Before using the clone tool you must set the source point (right click on it).\nEnable the exhaustive context help and read the Clone tool tooltip to get more info.
+5102=Cannot save the settings; check if i_view32.ini is writable.
+6001=Special thanks to:\r\n\r\nIrfan Skiljan, who developed IrfanView, spent time to edit it to make IrfanPaint work, gave me a lot of useful suggestions and has always been very available.\r\n\r\nThe users of the IrfanView support forum, and in particular:\r\nBhikkhu Pesala, who wrote the exhaustive tooltips and the help page, reported bugs, helped me to track down them and gave many suggestions.\r\nMatera, who, from the other side of the world, let me make remote debugging via a VPN over a dial-up connection on his computer to track a bug; the attempt failed, but it has been quite epic.\r\nSteve, the forum admin.\r\n\r\nAll the betatesters, and expecially Leon Fisk, who reported me all the problems of IrfanPaint on Windows NT 4.\r\n\r\nDavide Pizzolato and his great CxImage library (http://www.codeproject.com/KB/graphics/cximage.aspx), from which I stole some pieces of code.\r\n\r\nLode Vandevenne and his efficient implementation of the scanline floodfill algorithm with stack (http://student.kuleuven.be/~m0216922/CG/floodfill.html), that I adapted for IrfanPaint.\r\n\r\nCodeProject.com and its great articles, that helped me many times.\r\n\r\nAll the translators.\r\n\r\nAll the users that made donations: thank you!
+1443=Foreground
+1444=Background
+5301="%what%" is not a valid number.
+5302=The fields cannot be empty.
+1101=%language% translation by %translator%
+1651=Name
+1652=Symbol
+1653=Definition
+1654=Are you sure you want to delete the currently selected measure unit?
+1655=Deletion confirm
+7001=default unit
+7002=n.d.
+7003=DPI not set
+7011=inch
+7012=pixel
+7013=degree
+7014=millimeter
+5000=Error
+[101]
+0=About IrfanPaint
+1=OK
+1102=Text
+1104=&Visit IrfanPaint site
+[100]
+0=Paint
+1060=IrfanPaint toolbar
+1053=Width (px)
+1059=Fill
+1056=Tolerance:
+[103]
+0=Arrow settings
+1=OK
+2=Cancel
+1301=&First arrow
+1311=Draw:
+1302=&Second arrow
+1309=Arrow width:
+1310=Arrow length:
+1308=Open head
+[102]
+0=Color selection
+1=OK
+2=Cancel
+[104]
+0=Pen and brush settings
+1442=Pen
+1441=Brush
+1=OK
+2=Cancel
+1432=Style:
+1404=_______
+1405=_ _ _ _ _
+1406=. . . . . .
+1407=_ . _ . _ .
+1408=_ . . _ . .
+1433=Endcap:
+1410=Round
+1411=Square
+1412=Flat
+1434=Line joints:
+1413=Round
+1414=Beveled
+1415=Mitered
+1416=Solid
+1417=- (horizontal)
+1418=|| (vertical)
+1419=\\\\ (downward)
+1420=//  (upward)
+1421=+ (orthogonal)
+1422=x (diagonal)
+1435=Solid
+1437=45° left to right hatched
+1438=Cross hatched
+1436=Line hatched
+1439=Color
+1445=Pen width
+1448=pixel (1-9999)
+1440=Hatch secondary color
+1426=Transparent
+1429=spc = 1px spc\r\ndot = 1 endcap
+1431=Click on the preview pane above to exchange FG and BG styles.
+[105]
+0=Insert text
+1501=Font &name:
+1502=&Size:
+1506=&Bold
+1507=&Italic
+1508=&Underline
+1509=&Strikethrough
+1510=L&eft align
+1511=&Center align
+1512=&Right align
+1=OK
+2=Cancel
+1526=Hold to &preview
+1513=Select &color...
+1521=Render as
+1522=Empty path
+1524=Text
+1523=Filled path
+1525=Antialiased text
+[106]
+0=Measurement units
+1602=&Close
+1603=Move &up
+1604=Move &down
+1605=A&bsolutize
+1606=&Add...
+1607=&Edit...
+1608=&Remove
+[107]
+0=Edit measurement unit
+1701=Name:
+1703=Symbol:
+1705=Definition:
+1706=1 %unitsymbol% =
+1=OK
+2=Cancel
+[108]
+0=Measure results
+1=OK
+1803=&New unit...
+1802=&Copy
