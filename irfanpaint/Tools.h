@@ -73,18 +73,23 @@ public:
 	//Updates the resampled image (if resample option is enabled) and refresh the IVWND
 	static inline void UpdateResampledImage()
 	{
-		//Update the resampled image (if resample option is enabled) and refresh the IVWND
-		SendMessage(hMainWindow,WM_SET_RESAMPLE,2,0);
+		// Dummy function - now IV disables resampling when IP is started, and we're drawing the picture by ourselves
+		// Update the resampled image (if resample option is enabled) and refresh the IVWND
+		// SendMessage(hMainWindow,WM_SET_RESAMPLE,2,0);
+		InvalidateRect(hIVWindow,NULL,FALSE);
+		UpdateWindow(hIVWindow);
 	};
 	//Temporarily disable the resample option
 	static inline void DisableResample()
 	{
-		SendMessage(hMainWindow,WM_SET_RESAMPLE,0,0);
+		// Dummy function - now IV disables resampling when IP is started, and we're drawing the picture by ourselves
+		// SendMessage(hMainWindow,WM_SET_RESAMPLE,0,0);
 	};
 	//Reenable the resample option (disabled with TempDisableResample
 	static inline void ReenableResample()
 	{
-		SendMessage(hMainWindow,WM_SET_RESAMPLE,1,0);
+		// Dummy function - now IV disables resampling when IP is started, and we're drawing the picture by ourselves
+		// SendMessage(hMainWindow,WM_SET_RESAMPLE,1,0);
 	};
 	//Enables or disables the "extended controls" of the toolbox (i.e. the width updown and the fill checkbox)
 	static inline void EnableExtCtrls(bool widthSel, bool toleranceSel, bool fillSel)

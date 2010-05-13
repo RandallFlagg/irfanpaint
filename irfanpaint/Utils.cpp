@@ -488,10 +488,10 @@ void SetupClippingRegion()
 {
 	RECT IVClipRct={0}, DIBClipRct={0};
 	HRGN IVClipRgn=NULL, DIBClipRgn=NULL;
-	IVClipRct=GetSelectedRect();
+	DIBClipRct=GetSelectedRect();
 	if(dsUpdater!=NULL && dsUpdater->CheckState())
 	{
-		if(IsRectEmpty(&IVClipRct))
+		if(IsRectEmpty(&DIBClipRct))
 		{
 			//There's no selection
 			IVClipRct=GetImageRect();
@@ -499,15 +499,9 @@ void SetupClippingRegion()
 		}
 		else
 		{
-			//There's a selection
-			//Converts the IVW-coords to DIB-coords
-			DIBClipRct=IVClipRct;
-			DIBClipRct.bottom++;
-			DIBClipRct.right++;
-			IVWnd2DIBPoint((POINT *)&DIBClipRct);
-			IVWnd2DIBPoint(((POINT *)&DIBClipRct)+1);
-			IVClipRct.left++; //So we don't go over the selection line
-			IVClipRct.top++;
+			IVClipRct=DIBClipRct;
+			DIB2IVWndPoint((POINT *)&IVClipRct);
+			DIB2IVWndPoint(((POINT *)&IVClipRct)+1);
 		}
 		//Create the regions and select them in the DCs
 		if(!IsRectEmpty(&IVClipRct))
@@ -569,6 +563,11 @@ RECT GetSelectedRect()
 		SendMessage(hMainWindow,WM_GET_SELECTION,(WPARAM)&selRect,0);
 		lastMsgNumber=MsgNumber;
 	}
+	//#define it if the WM_GET_SELECTION provides *window* coords instead of DIB coords
+#ifdef OLD_WM_GET_SELECTION
+	IVWnd2DIBPoint((POINT *)&selRect);
+	IVWnd2DIBPoint(((POINT *)&selRect)+1);
+#endif
 	return selRect;
 }
 //Returns the current image shift from the upper-left corner of the IVW
