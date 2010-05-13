@@ -163,7 +163,8 @@ struct POINTD
 		Return value:
 			Not used.
 	Remarks:
-		The coords are relative to the IrfanViewer window client area.
+		Up to IV 4.27: the coords are relative to the IrfanViewer window client area.
+		After IV 4.27: the coords are relative to the DIB.
 	See also:
 		GetSelectedRect()
 
@@ -399,7 +400,7 @@ template <class outType, class inType> outType ConvertType(inType inVal)
 #pragma warning(pop)
 //Sets up the clipping region of IVWDC and dsUpdater->GetDibSection()->m_compDC
 void SetupClippingRegion();
-//Returns the currently selected RECT
+//Returns the currently selected RECT in DIB coords
 RECT GetSelectedRect();
 //Displays an error message box (message specified by ID)
 int ErrMsgBox(HWND hwndOwner, int messageID, DWORD * lastError=NULL, int flags=(MB_OK|MB_ICONERROR));

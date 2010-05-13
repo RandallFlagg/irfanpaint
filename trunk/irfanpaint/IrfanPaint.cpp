@@ -775,6 +775,7 @@ LRESULT CALLBACK IVWndProc(HWND hWnd,
 				//Remove the precision cursors
 				normPC.BeginRefresh();
 				clsrPC.BeginRefresh();
+//#define IV_PAINT
 #ifdef IV_PAINT
 				//Paint the window (send the message to the real wnd proc)
 				lr=CallWindowProc(realIVWndProc,hWnd,uMsg,wParam,lParam);
@@ -856,6 +857,8 @@ LRESULT CALLBACK IVWndProc(HWND hWnd,
 					}
 					//Selection drawing
 					RECT selRect=GetSelectedRect();
+					DIB2IVWndPoint((POINT *)&selRect);
+					DIB2IVWndPoint(((POINT *)&selRect)+1);
 					if(!IsRectEmpty(&selRect))
 					{
 						//Include also the bottom and right coords

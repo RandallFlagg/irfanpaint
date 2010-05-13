@@ -536,6 +536,9 @@
 				Name="Language files"
 				Filter="">
 				<File
+					RelativePath=".\IVDir\Languages\IP_Catalan.lng">
+				</File>
+				<File
 					RelativePath=".\IVDir\Languages\IP_Chinese_TW.lng">
 				</File>
 				<File
