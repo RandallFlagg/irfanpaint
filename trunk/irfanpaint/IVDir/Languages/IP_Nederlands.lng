@@ -1,4 +1,4 @@
-;Datum vertaling: 01-aug-2009
+;Datum vertaling: mei-2010
 [FileInfo]
 TranslatorName=Theo Landman
 LanguageName=Nederlands
@@ -63,9 +63,9 @@ TargetVersion=0.4.13.*
 0=Over IrfanPaint
 1=OK
 1102=Tekst
-1104=&Bezoek IrfanPaint-Website
+1104=&Naar de IrfanPaint-Website
 [100]
-0=Paint
+0=Verf
 1060=Werkbalk IrfanPaint
 1053=Grootte (Pixel)
 1059=Vullen
@@ -120,10 +120,10 @@ TargetVersion=0.4.13.*
 1448=Pixel (1-9999)
 1440=Tweede kleur voor arcering
 1426=Transparant
-1429=space=1 pix. spc.\r\n.=1 px. Lijn
-1431=Hierboven 'voorbeeld'. Klik om Voor- en Achtergrondinst. om te wisselen.
+1429=spatie = 1px. ruimte\r\npunt = 1 eindpunt
+1431=Klik op het voorbeeld venster om de Voor- en Achtergrondinstellingen om te wisselen.
 [105]
-0=Voeg tekst in
+0=Tekst invoegen
 1501=&Naam Lettertype:
 1502=&Grootte:
 1506=&Vet

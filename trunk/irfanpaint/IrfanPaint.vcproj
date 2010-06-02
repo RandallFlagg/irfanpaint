@@ -551,6 +551,9 @@
 					RelativePath=".\IVDir\Languages\IP_English.lng">
 				</File>
 				<File
+					RelativePath=".\IVDir\Languages\IP_Estonian.lng">
+				</File>
+				<File
 					RelativePath=".\IVDir\Languages\IP_French.lng">
 				</File>
 				<File
