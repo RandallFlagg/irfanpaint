@@ -1,4 +1,4 @@
-;Language file template generated on Sat, 05 Sep 2009 15:15:54 GMT by IPLFGen by Matteo Italia - v. 0.1.4.7
+;Language file template generated on Wed, 28 Jul 2010 19:20:11 GMT by IPLFGen by Matteo Italia - v. 0.1.4.7
 ;=== FILE STRUCTURE ===
 ;The language file contains a [FileInfo] section, a [General] section and some numbered sections (e.g. [101], [102], ...)
 ;The [FileInfo] sections contains informations about the translator, the language name and the target IrfanPaint version.
