@@ -1,6 +1,6 @@
 @ECHO OFF
 ECHO Copia del plugin...
-PATH %path%;C:\Programmi\IZArc
+PATH %path%;c:\Program Files (x86)\IZArc
 COPY ..\Release_Speed\IrfanPaint.dll IVDir\Plugins\Paint.dll
 SET /P vn="Inserisci il numero di versione o Invio per uscire: "
 IF "%vn%"=="" GOTO :EOF
