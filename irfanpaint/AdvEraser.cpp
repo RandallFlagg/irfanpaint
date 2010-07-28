@@ -16,13 +16,5 @@ void AdvEraser::erase(DibSection * ds)
 //Stores a new backup DibSection
 void AdvEraser::StoreNewDS(DibSection * ds)
 {
-	backupDibSection=new DibSection(*ds,false);
-}
-
-//Disposes the backup DibSection
-void AdvEraser::DisposeDS()
-{
-	CheckClass();
-	delete backupDibSection;
-	backupDibSection=NULL;
+	backupDibSection.reset(new DibSection(*ds,false));
 }

@@ -6,40 +6,26 @@ class AdvEraser :
 	public MaskedTool
 {
 private:
-	DibSection * backupDibSection;
+	boost::scoped_ptr<DibSection> backupDibSection;
 	//Performs the erasing
 	void erase(DibSection * ds);
 public:
 	//Check the status of the class
 	inline void CheckClass()
 	{
-		if(backupDibSection==NULL)
-			throw std::logic_error(ERROR_STD_PROLOG "The class has already been disposed.");
+		if(backupDibSection.get()==NULL)
+			throw std::logic_error(ERROR_STD_PROLOG "The class doesn't hold a valid backup DibSection.");
 	};
 	//Default constructor
-	inline AdvEraser(DibSection * ds=NULL)
+	inline AdvEraser(DibSection * ds=NULL) : backupDibSection(NULL)
 	{
-		backupDibSection=NULL;
 		if(ds!=NULL)
 			StoreNewDS(ds);
 		return;
 	};
-	//Default destructor
-	inline ~AdvEraser(void)
-	{
-		try
-		{
-			DisposeDS();
-		}
-		catch(...)
-		{
-		}
-		return;	
-	};
+	
 	//Stores a backup DibSection
 	void StoreNewDS(DibSection * ds);
-	//Disposes the backup DibSection
-	void DisposeDS();
 	
 	//Erases the specified line restoring the original DIB
 	inline void EraseLine(

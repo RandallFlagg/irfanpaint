@@ -54,7 +54,7 @@ double MUPixel::GetDistance(DibSection & DibSect, POINT pt1, POINT pt2) const
 }
 double MUDegree::GetDistance(DibSection & DibSect, POINT pt1, POINT pt2) const
 {
-	return (double)(atan(((double)(pt2.y-pt1.y))/((double)(pt2.x-pt1.x)))*(180.0/M_PI));
+	return (double)(atan(((double)(pt2.y-pt1.y))/((double)(pt2.x-pt1.x)))*(180.0/boost::math::constants::pi<double>()));
 }
 #pragma warning(pop)
 double MUInch::GetDistance(DibSection & DibSect, POINT pt1, POINT pt2) const
