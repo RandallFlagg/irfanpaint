@@ -39,6 +39,8 @@
 #include <boost/scoped_ptr.hpp>
 //scoped_array
 #include <boost/scoped_array.hpp>
+//pi &c.
+#include <boost/math/constants/constants.hpp>
 //Generic text mappings
 //tchar.h default mappings
 #include <tchar.h>
@@ -80,8 +82,6 @@ namespace std
 #endif
 //Support macro to determine the size of a static array
 #define ARRSIZE(arr)	(sizeof(arr)/sizeof(*arr))
-//cmath defines also some mathematical constants
-#define _USE_MATH_DEFINES
 //Math functions
 #include <cmath>
 //Limits of the data types

@@ -735,7 +735,7 @@ void UIStraighten::DrawShape(HDC hDC, POINT FirstVertex, POINT LastVertex)
 void UIStraighten::PerformAction(POINT FirstVertex, POINT LastVertex, UINT KeyFlags)
 {
 	//Calculate the angle
-	float angle=(float)(-atan(((double)(LastVertex.y-FirstVertex.y))/((double)(LastVertex.x-FirstVertex.x)))*(180/M_PI));
+	float angle=(float)(-atan(((double)(LastVertex.y-FirstVertex.y))/((double)(LastVertex.x-FirstVertex.x)))*(180.0/boost::math::constants::pi<double>()));
 	if(abs(angle>45))
 		angle=angle-90;
 	else if(angle<-45)

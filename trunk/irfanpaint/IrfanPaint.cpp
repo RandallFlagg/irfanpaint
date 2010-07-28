@@ -271,8 +271,8 @@ BOOL __cdecl ShowIrfanPaintTB(HANDLE * f_pImgDIB, HWND f_hMainWindow, HWND f_hIV
 		realIVWndProc=(WNDPROC)(LONG_PTR)SetWindowLongPtr(hIVWindow,GWLP_WNDPROC,(__int3264)(LONG_PTR)IVWndProc);
 		//Invalidate the area of the main window (otherwise weird things happen)
 		InvalidateRect(hMainWindow,NULL,TRUE);
-	    //Notify IV that we've created the plugin window
-	    SendMessage(hMainWindow,WM_PLUGIN_HWND,PLUGIN_ID_PAINT,(LPARAM)hToolBoxWindow);
+		//Notify IV that we've created the plugin window
+		SendMessage(hMainWindow,WM_PLUGIN_HWND,PLUGIN_ID_PAINT,(LPARAM)hToolBoxWindow);
 	}
 	catch(exception &ex)
 	{
