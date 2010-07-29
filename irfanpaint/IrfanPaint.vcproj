@@ -55,7 +55,9 @@
 				Description="Copia della dll nella cartella dei plug-in..."
 				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(ProjectDir)IVDir\Plugins\Paint.dll&quot;"/>
 			<Tool
-				Name="VCPreBuildEventTool"/>
+				Name="VCPreBuildEventTool"
+				Description="Free the PDB (Windows 7 + VS2003 bug)"
+				CommandLine="C:\Users\Matteo\Documents\cmd\FreePDB_bat.cmd.lnk $(ProjectName)"/>
 			<Tool
 				Name="VCPreLinkEventTool"/>
 			<Tool
@@ -124,7 +126,9 @@
 				Description="Copia della dll nella cartella dei plug-in..."
 				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(ProjectDir)IVDir\Plugins\Paint.dll&quot;"/>
 			<Tool
-				Name="VCPreBuildEventTool"/>
+				Name="VCPreBuildEventTool"
+				Description="Free the PDB (Windows 7 + VS2003 bug)"
+				CommandLine="C:\Users\Matteo\Documents\cmd\FreePDB_bat.cmd.lnk $(ProjectName)"/>
 			<Tool
 				Name="VCPreLinkEventTool"/>
 			<Tool
@@ -192,7 +196,9 @@
 				Description="Copia della dll nella cartella dei plug-in..."
 				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(ProjectDir)IVDir\Plugins\Paint.dll&quot;"/>
 			<Tool
-				Name="VCPreBuildEventTool"/>
+				Name="VCPreBuildEventTool"
+				Description="Free the PDB (Windows 7 + VS2003 bug)"
+				CommandLine="C:\Users\Matteo\Documents\cmd\FreePDB_bat.cmd.lnk $(ProjectName)"/>
 			<Tool
 				Name="VCPreLinkEventTool"/>
 			<Tool
@@ -343,6 +349,9 @@
 			</File>
 			<File
 				RelativePath=".\Compatibility.h">
+			</File>
+			<File
+				RelativePath=".\Config.h">
 			</File>
 			<File
 				RelativePath=".\DibSection.h">

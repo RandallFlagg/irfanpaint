@@ -5,7 +5,8 @@
 //Disable two annoying warnings
 #pragma warning(disable : 4512) //Cannot generate an assignment operator
 #pragma warning(disable : 4511) //Cannot generate a copy constructor
-
+//Config #defines etc.
+#include "Config.h"
 //Exclude rarely used elements from the Windows header
 #define VC_EXTRALEAN
 //Strict type checking in the Windows headers

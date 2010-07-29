@@ -194,7 +194,7 @@ BOOL __cdecl ShowIrfanPaintTB(HANDLE * f_pImgDIB, HWND f_hMainWindow, HWND f_hIV
 			strcpy(errMSG,"f_pImgDIB points to NULL.");
 			return FALSE;
 		}
-		//Close if we are already running
+		//Close if we are already running 
 		if(IsWindow(hToolBoxWindow))
 		{
 			CleanUp();
@@ -778,7 +778,7 @@ LRESULT CALLBACK IVWndProc(HWND hWnd,
 //#define IV_PAINT
 #ifdef IV_PAINT
 				//Paint the window (send the message to the real wnd proc)
-				lr=CallWindowProc(realIVWndProc,hWnd,uMsg,wParam,lParam);
+				lr=CallWindowProc(realIVWndProc,NULL,uMsg,wParam,lParam);
 #else
 				//Does the painting by itself (much much faster, I don't know why)
 				PAINTSTRUCT ps;
