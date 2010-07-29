@@ -560,14 +560,24 @@ RECT GetSelectedRect()
 	static unsigned int lastMsgNumber=0;
 	if(lastMsgNumber==0|| lastMsgNumber!=MsgNumber) //We need to obtain a fresh value
 	{
-		SendMessage(hMainWindow,WM_GET_SELECTION,(WPARAM)&selRect,0);
 		lastMsgNumber=MsgNumber;
-	}
-	//#define it if the WM_GET_SELECTION provides *window* coords instead of DIB coords
+		RECT lastRect;
+		lastRect=selRect;
+		SendMessage(hMainWindow,WM_GET_SELECTION,(WPARAM)&selRect,0);
+		//#define it if the WM_GET_SELECTION provides *window* coords instead of DIB coords
 #ifdef OLD_WM_GET_SELECTION
-	IVWnd2DIBPoint((POINT *)&selRect);
-	IVWnd2DIBPoint(((POINT *)&selRect)+1);
+		IVWnd2DIBPoint((POINT *)&selRect);
+		IVWnd2DIBPoint(((POINT *)&selRect)+1);
 #endif
+#ifndef IV_PAINT
+		//HACK: if the old and new selections are different, redraw the window
+		// (otherwise, because of the different painting/conversion routines of IV/IP, the
+		// screen becomes messy)
+		// This is a UGLY hack, remove it ASAP!
+		if(!EqualRect(&selRect,&lastRect))
+			InvalidateRect(hIVWindow,NULL,FALSE);
+#endif
+	}
 	return selRect;
 }
 //Returns the current image shift from the upper-left corner of the IVW
@@ -584,6 +594,7 @@ POINT GetShift()
 	}
 	else if(lastMsgNumber==0 || lastMsgNumber!=MsgNumber)
 	{
+		POINT lastShift=shift;
 		shift.x=INT_MIN;
 		shift.y=INT_MIN;
 		lr=SendMessage(hMainWindow,WM_GET_SCROLL_VALUES,(WPARAM)&shift,0);
@@ -610,6 +621,13 @@ POINT GetShift()
 			}
 		}
 		lastMsgNumber=MsgNumber;
+		//HACK: when the shift changes fake a WM_PAINT directly to the real IV wndproc, so that it can update its internal state
+		//note: this is a UGLY hack, it must be cleaned up ASAP!
+		if(lastShift.x!=shift.x || lastShift.y!=shift.y)
+		{
+			extern WNDPROC realIVWndProc;
+			CallWindowProc(realIVWndProc,hIVWindow,WM_PAINT,0,0);
+		}
 	}
 	return shift;
 }

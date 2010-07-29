@@ -594,6 +594,24 @@ public:
 	{
 		defaultRetVal=false;
 	};
+	//HACK: to force correct selection redrawing, call GetSelectedRect if the user is dragging
+	// As stated in other place, this whole thing is a UGLY hack to be removed ASAP!
+	MessageReturnValue OnMouseMove(HWND hwnd, int x, int y, UINT keyFlags)
+	{
+		if(keyFlags&(MK_LBUTTON | MK_RBUTTON))
+			GetSelectedRect();
+		return UIBaseTool::OnMouseMove(hwnd,x,y,keyFlags);
+	}
+	MessageReturnValue OnLButtonUp(HWND hwnd, int x, int y, UINT keyFlags)
+	{
+		GetSelectedRect();
+		return UIBaseTool::OnLButtonUp(hwnd,x,y,keyFlags);
+	}
+	MessageReturnValue OnRButtonUp(HWND hwnd, int x, int y, UINT keyFlags)
+	{
+		GetSelectedRect();
+		return UIBaseTool::OnRButtonUp(hwnd,x,y,keyFlags);
+	}
 };
 //FloodFill tool
 class UIFloodFill : public UISingleClickTool
