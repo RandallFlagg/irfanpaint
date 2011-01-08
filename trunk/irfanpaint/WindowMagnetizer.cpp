@@ -5,7 +5,6 @@
 POINT WindowMagnetizer::getToolbarPos(LPRECT tbRect)
 {
 	RECT mainWindowRect, toolbarRect; //Bounds of the two windows
-	RECT workingAreaRect={0}; //Bounds of the working area
 	POINT toolbarNewPos; //New position of the toolbar
 	//Retrieve the bounds of the two windows
 	GetWindowRect(mainWindow,&mainWindowRect);
@@ -13,8 +12,6 @@ POINT WindowMagnetizer::getToolbarPos(LPRECT tbRect)
 		toolbarRect=*tbRect;
 	else
 		GetWindowRect(toolbar,&toolbarRect);
-	//Retrieve the bounds of the working area
-	SystemParametersInfo(SPI_GETWORKAREA,0,&workingAreaRect,0);
 	if(!IsInitialized() || magnState==WindowMagnetizer::NotMagnetized || !enabled)
 	{
 		toolbarNewPos.x=toolbarRect.left;
@@ -39,10 +36,10 @@ POINT WindowMagnetizer::getToolbarPos(LPRECT tbRect)
 			toolbarNewPos.y=toolbarRect.top;
 			break;
 		}
-		if(toolbarNewPos.x<workingAreaRect.left)
-			toolbarNewPos.x=workingAreaRect.left;
-		else if	((toolbarNewPos.x+(toolbarRect.right-toolbarRect.left))>workingAreaRect.right)
-			toolbarNewPos.x=workingAreaRect.right-(toolbarRect.right-toolbarRect.left);
+        OffsetRect(&toolbarRect,toolbarNewPos.x-toolbarRect.left, toolbarNewPos.y-toolbarRect.top);
+        ClipOrCenterRectToMonitor(&toolbarRect, MonitorClip, MonitorWorkArea);
+        toolbarNewPos.x=toolbarRect.left;
+        toolbarNewPos.y=toolbarRect.top;
 	}
 	return toolbarNewPos;
 }
