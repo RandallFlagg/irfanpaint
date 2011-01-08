@@ -154,7 +154,7 @@ void PBSettings_OnCommand(HWND hwnd, int id, HWND hwndCtl, UINT codeNotify)
 				ShowWindow(GetDlgItem(hwnd,IDC_PB_P_IS_CUSTOM),SW_HIDE);
 			}
 			pbsdp->GetCurrentCU().SetPenSettings(lp);
-			if((lp.dwPenStyle&PS_USERSTYLE)&&lp.lpStyle!=NULL)
+			if(((lp.dwPenStyle&PS_STYLE_MASK)==PS_USERSTYLE)&&lp.lpStyle!=NULL)
 				delete[] lp.lpStyle;
 			UpdatePreviewPane(hwnd);
 			break;

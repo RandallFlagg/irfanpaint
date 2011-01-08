@@ -137,7 +137,7 @@ void INISection::GetKey(const std::_tcstring & Key, void * Struct, size_t Struct
 		return;
 	const TCHAR * readPtr=strValue.c_str();
 	//Length check
-	if(strValue.size()<(StructSize+1)*2)
+	if(strValue.size()!=(StructSize+1)*2)
 		throw std::runtime_error(ERROR_STD_PROLOG "The stored value is not valid for this structure.");
 	//Convert the string
     for(unsigned char * writePtr=castedStruct;

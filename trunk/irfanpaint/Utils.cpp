@@ -299,7 +299,7 @@ void LoadSettings(INISection & IniSect)
 	if(IniSect.KeyExists(_T("bgPen")))
 	{
 		IniSect.GetKey(_T("bgPen"),&tlp,sizeof(tlp));
-		if(tlp.dwPenStyle&PS_USERSTYLE)
+		if((tlp.dwPenStyle&PS_STYLE_MASK)==PS_USERSTYLE)
 		{
 			std::_tcstring bpus=IniSect.GetKey(_T("bgPenUserStyle"),_T("."));
 			tlp.dwStyleCount=DotSpaceStr2StyleArray(bpus.c_str(),NULL,true);
@@ -310,8 +310,7 @@ void LoadSettings(INISection & IniSect)
 			}
 			else
 			{
-				tlp.dwPenStyle&=!PS_USERSTYLE;
-				tlp.dwPenStyle|=PS_SOLID;
+				tlp.dwPenStyle=(tlp.dwPenStyle&~PS_STYLE_MASK)|PS_SOLID;
 				tlp.lpStyle=NULL;
 			}
 		}
@@ -335,7 +334,7 @@ void LoadSettings(INISection & IniSect)
 	if(IniSect.KeyExists(_T("fgPen")))
 	{
 		IniSect.GetKey(_T("fgPen"),&tlp,sizeof(tlp));
-		if(tlp.dwPenStyle&PS_USERSTYLE)
+		if((tlp.dwPenStyle&PS_STYLE_MASK)==PS_USERSTYLE)
 		{
 			std::_tcstring fpus=IniSect.GetKey(_T("fgPenUserStyle"),_T("."));
 			tlp.dwStyleCount=DotSpaceStr2StyleArray(fpus.c_str(),NULL,true);
@@ -346,8 +345,7 @@ void LoadSettings(INISection & IniSect)
 			}
 			else
 			{
-				tlp.dwPenStyle&=!PS_USERSTYLE;
-				tlp.dwPenStyle|=PS_SOLID;
+				tlp.dwPenStyle=(tlp.dwPenStyle&~PS_STYLE_MASK)|PS_SOLID;
 				tlp.lpStyle=NULL;
 			}
 		}
