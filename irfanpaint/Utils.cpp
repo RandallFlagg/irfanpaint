@@ -399,12 +399,12 @@ void LoadSettings(INISection & IniSect)
 	windowMagnetizer.SetMagnetizationLimit(abs((int)IniSect.GetKey(_T("TBMagnLimit"),windowMagnetizer.GetMagnetizationLimit())));
 	if(windowMagnetizer.GetMagnetizationState()==WindowMagnetizer::NotMagnetized)
 	{
-		RECT tbRect;
-		GetWindowRect(hToolBoxWindow,&tbRect);
-		tbRect.left=IniSect.GetKey(_T("TBXPos"),tbRect.left);
-		tbRect.top=IniSect.GetKey(_T("TBYPos"),tbRect.top);
-		SetWindowPos(hToolBoxWindow, 0, tbRect.left, tbRect.top, 0, 0, SWP_NOSIZE | SWP_NOACTIVATE | SWP_NOZORDER);
-		MoveInWorkingArea(hToolBoxWindow);
+        RECT tbRect={0,0};
+        GetWindowRect(hToolBoxWindow, &tbRect);
+        MoveWindowWithClipping(hToolBoxWindow,
+            IniSect.GetKey(_T("TBXPos"),tbRect.left),
+            IniSect.GetKey(_T("TBYPos"),tbRect.top)
+            );
 	}
 	else
 	{
@@ -825,28 +825,73 @@ unsigned int ReplaceString(std::_tcstring & string,const std::_tcstring & search
 	return ret;
 }
 
-//Makes sure that a window is entirely in the working area and eventually moves it
-void MoveInWorkingArea(HWND hwnd)
+// Move the window at the specified location avoiding it going offscreen
+void MoveWindowWithClipping(HWND hwnd, int X, int Y)
 {
-	RECT wndRect,workingAreaRect;
-	//Retrieve the bounds of the working area
-	if(!SystemParametersInfo(SPI_GETWORKAREA,0,&workingAreaRect,0))
-		return;
-	//Retrieve the bounds of the window
-	if(!GetWindowRect(hwnd,&wndRect))
-		return;
-	//Make sure that the window is in the working area and eventually correct the upper-left corner of the window (the only used in the SetWindowPos)
-	if(wndRect.left<workingAreaRect.left)
-		wndRect.left=workingAreaRect.left;
-	else if(wndRect.right>workingAreaRect.right)
-		wndRect.left=workingAreaRect.right-RECTWIDTH(wndRect);
-	if(wndRect.top<workingAreaRect.top)
-		wndRect.top=workingAreaRect.top;
-	else if(wndRect.bottom>workingAreaRect.bottom)
-		wndRect.top=workingAreaRect.bottom-RECTHEIGHT(wndRect);
-	SetWindowPos(hwnd, 0, wndRect.left, wndRect.top, 0, 0, SWP_NOSIZE | SWP_NOACTIVATE | SWP_NOZORDER);
-
+    RECT targetPos={0};
+    GetWindowRect(hwnd,&targetPos);
+    OffsetRect(&targetPos,X-targetPos.left,Y-targetPos.top);
+    ClipOrCenterRectToMonitor(&targetPos, MonitorClip, MonitorWorkArea);
+    SetWindowPos(hwnd, 0, targetPos.left, targetPos.top, 0, 0, SWP_NOSIZE | SWP_NOACTIVATE | SWP_NOZORDER);
 }
+
+// Straight from MSDN
+//
+//  ClipOrCenterRectToMonitor
+//
+//  The most common problem apps have when running on a
+//  multimonitor system is that they "clip" or "pin" windows
+//  based on the SM_CXSCREEN and SM_CYSCREEN system metrics.
+//  Because of app compatibility reasons these system metrics
+//  return the size of the primary monitor.
+//
+//  This shows how you use the multi-monitor functions
+//  to do the same thing.
+//
+void ClipOrCenterRectToMonitor(LPRECT prc, COCRM_Position PositionFlags, COCRM_Area AreaFlags)
+{
+    HMONITOR hMonitor;
+    MONITORINFO mi;
+    RECT        rc;
+    int         w = prc->right  - prc->left;
+    int         h = prc->bottom - prc->top;
+
+    //
+    // get the nearest monitor to the passed rect.
+    //
+    hMonitor = MonitorFromRect(prc, MONITOR_DEFAULTTONEAREST);
+
+    //
+    // get the work area or entire monitor rect.
+    //
+    mi.cbSize = sizeof(mi);
+    GetMonitorInfo(hMonitor, &mi);
+
+    if (AreaFlags==MonitorWorkArea)
+        rc = mi.rcWork;
+    else
+        rc = mi.rcMonitor;
+
+    //
+    // center or clip the passed rect to the monitor rect
+    //
+    if (PositionFlags==MonitorCenter)
+    {
+        prc->left   = rc.left + (rc.right  - rc.left - w) / 2;
+        prc->top    = rc.top  + (rc.bottom - rc.top  - h) / 2;
+        prc->right  = prc->left + w;
+        prc->bottom = prc->top  + h;
+    }
+    else
+    {
+        prc->left   = max(rc.left, min(rc.right-w,  prc->left));
+        prc->top    = max(rc.top,  min(rc.bottom-h, prc->top));
+        prc->right  = prc->left + w;
+        prc->bottom = prc->top  + h;
+    }
+}
+
+
 /*
 //Returns the size of a DIB pixel on the viewer window
 SIZED GetDIBPixelSize()

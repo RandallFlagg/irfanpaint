@@ -540,8 +540,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,4,13,70
- PRODUCTVERSION 0,4,13,70
+ FILEVERSION 0,4,13,71
+ PRODUCTVERSION 0,4,13,71
  FILEFLAGSMASK 0x1fL
 #ifdef _DEBUG
  FILEFLAGS 0xbL
@@ -559,13 +559,13 @@ BEGIN
             VALUE "Comments", "IrfanView drawing plug-in"
             VALUE "CompanyName", "Matteo Italia (irfanpaint@mitalia.net)"
             VALUE "FileDescription", "IrfanView drawing plug-in"
-            VALUE "FileVersion", "0, 4, 13, 70"
+            VALUE "FileVersion", "0, 4, 13, 71"
             VALUE "InternalName", "IrfanPaint"
             VALUE "LegalCopyright", "Copyright © 2007-2010 by Matteo Italia"
             VALUE "OriginalFilename", "IrfanPaint.dll"
             VALUE "PrivateBuild", "Beta"
             VALUE "ProductName", "IrfanView drawing plug-in"
-            VALUE "ProductVersion", "0, 4, 13, 70"
+            VALUE "ProductVersion", "0, 4, 13, 71"
         END
     END
     BLOCK "VarFileInfo"
@@ -645,7 +645,7 @@ END
 
 STRINGTABLE 
 BEGIN
-    IDS_THANKS              "Special thanks to:\r\n\r\nIrfan Skiljan, who developed IrfanView, spent time to edit it to make IrfanPaint work, gave me a lot of useful suggestions and has always been very available.\r\n\r\nThe users of the IrfanView support forum, and in particular:\r\nBhikkhu Pesala, who wrote the exhaustive tooltips and the help page, reported bugs, helped me to track down them and gave many suggestions.\r\nMatera, who, from the other side of the world, let me make remote debugging via a VPN over a dial-up connection on his computer to track a bug; the attempt failed, but it has been quite epic.\r\nSteve, the forum admin.\r\n\r\nAll the betatesters, and expecially Leon Fisk, who reported me all the problems of IrfanPaint on Windows NT 4.\r\n\r\nDavide Pizzolato and his great CxImage library (http://www.codeproject.com/KB/graphics/cximage.aspx), from which I stole some pieces of code.\r\n\r\nLode Vandevenne and his efficient implementation of the scanline floodfill algorithm with stack (http://student.kuleuven.be/~m0216922/CG/floodfill.html), that I adapted for IrfanPaint.\r\n\r\nCodeProject.com and its great articles, that helped me many times.\r\n\r\nAll the translators.\r\n\r\nAll the users that made donations: thank you!"
+    IDS_THANKS              "Special thanks to:\r\n\r\nIrfan Skiljan, who developed IrfanView, spent time to edit it to make IrfanPaint work, gave me a lot of useful suggestions and has always been very available.\r\n\r\nThe users of the IrfanView support forum, and in particular:\r\nBhikkhu Pesala, who wrote the exhaustive tooltips and the help page, reported bugs, helped me to track down them and gave many suggestions.\r\nMatera, who, from the other side of the world, let me make remote debugging via a VPN over a dial-up connection on his computer to track a bug; the attempt failed, but it has been quite epic.\r\nSteve, the forum admin.\r\n\r\nAll the betatesters, and expecially Leon Fisk, who reported me all the problems of IrfanPaint on Windows NT 4.\r\n\r\nDavide Pizzolato and his great CxImage library (http://www.codeproject.com/KB/graphics/cximage.aspx), from which I stole some pieces of code.\r\n\r\nLode Vandevenne and his efficient implementation of the scanline floodfill algorithm with stack (http://student.kuleuven.be/~m0216922/CG/floodfill.html), that I adapted for IrfanPaint.\r\n\r\nMichael Grosberg, who drew the new fancy icons.\r\n\r\nCodeProject.com and its great articles, that helped me many times.\r\n\r\nAll the translators.\r\n\r\nAll the users that made donations: thank you!"
 END
 
 STRINGTABLE 

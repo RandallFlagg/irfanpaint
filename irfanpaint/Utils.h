@@ -453,5 +453,33 @@ __forceinline bool similarColor2(RGBQUAD color1, RGBQUAD color2, BYTE threshold)
 bool ValidateUIntFieldChange(HWND parent, WORD ctrlID, UINT & lastValue, UINT minValue, UINT maxValue);
 //Replaces all the instances of search with replace in string; returns the number of substitutions done
 unsigned int ReplaceString(std::_tcstring & string,const std::_tcstring & search,const std::_tcstring & replace);
-//Makes sure that a window is entirely in the working area and eventually moves it
-void MoveInWorkingArea(HWND hwnd);
+
+enum COCRM_Position
+{
+    MonitorCenter,     // center rect to monitor
+    MonitorClip        // clip rect to monitor
+};
+
+enum COCRM_Area
+{
+    MonitorWorkArea,   // use monitor work area
+    MonitorArea        // use monitor entire area
+};
+
+// Straight from MSDN
+//
+//  ClipOrCenterRectToMonitor
+//
+//  The most common problem apps have when running on a
+//  multimonitor system is that they "clip" or "pin" windows
+//  based on the SM_CXSCREEN and SM_CYSCREEN system metrics.
+//  Because of app compatibility reasons these system metrics
+//  return the size of the primary monitor.
+//
+//  This shows how you use the multi-monitor functions
+//  to do the same thing.
+//
+void ClipOrCenterRectToMonitor(LPRECT prc, COCRM_Position PositionFlags, COCRM_Area AreaFlags);
+
+// Move the window at the specified location avoiding it going offscreen
+void MoveWindowWithClipping(HWND hwnd, int X, int Y);
