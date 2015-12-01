@@ -1,0 +1,1 @@
+replace GDI+ with Direct2D - ID2D1RenderTarget interface
